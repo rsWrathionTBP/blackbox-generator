@@ -1,0 +1,13 @@
+[package]
+name = "blackbox-generator"
+version = "0.0.1"
+edition = "2021"
+description="In develop"
+repository="https://github.com/BigBangNFTs/bigbang-generator"
+license = "Apache-2.0"
+
+[[bin]]
+name = "blackbox"
+path = "src/main.rs"
+
+[dependencies]
