@@ -5,7 +5,7 @@ use std::path::PathBuf;
 use crate::init::initialize_working_folder;
 
 pub fn command_init(actual_path: PathBuf) -> Result<()> {
-    initialize_working_folder(actual_path)?;
+    initialize_working_folder(&actual_path)?;
     Ok(())
 }
 
