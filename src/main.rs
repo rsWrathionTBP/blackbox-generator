@@ -14,7 +14,6 @@ use blackbox_generator::select_command::{
 };
 
 fn main() -> Result<()> {
-
     let (option, actual_path) = get_input()?;
 
     match option.command {

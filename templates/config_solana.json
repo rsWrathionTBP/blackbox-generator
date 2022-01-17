@@ -1,0 +1,38 @@
+{
+    "name": "",
+    "description": "Change me!",
+    "symbol": "CHANGEME",
+    "seller_fee_basis_point": 500,
+    "width": 1024,
+    "height": 1024,
+    "customNFTs": [
+        {
+            "quantity": 0,
+            "separateFolder": false,
+            "name": "",
+            "description": "",
+            "seller_fee_basis_point": 0,
+            "extension": ".png",
+            "items": [
+                
+            ],
+            "attributes": [
+                {"trait_type": "", "value": ""},
+                {"trait_type": "", "value": ""}, 
+                {"trait_type": "", "value": ""}
+            ]
+        }
+    ],
+    "noCombineTraits": [
+
+    ],
+    "layerConfigs": [
+        {
+            "quantity": 10,
+            "extension": ".png",
+            "layersOrder": [
+
+            ]
+        }
+    ]
+}
