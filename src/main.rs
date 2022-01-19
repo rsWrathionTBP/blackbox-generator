@@ -17,7 +17,7 @@ fn main() -> Result<()> {
     let (option, actual_path) = get_input()?;
 
     match option.command {
-        Command::Init {} => command_init(actual_path)?,
+        Command::Init {init_subcommands} => command_init(actual_path, init_subcommands)?,
         Command::Verify {} => command_verify()?,
         Command::Config {} => command_config()?,
         Command::Edit {} => command_edit()?,

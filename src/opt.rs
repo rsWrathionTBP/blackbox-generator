@@ -20,7 +20,10 @@ pub struct Opt {
 pub enum Command {
     /// Creates a new working folder in the current directory.
     #[structopt(name = "init")]
-    Init {},
+    Init { 
+        #[structopt(subcommand)]
+        init_subcommands: InitSubcommands,
+    },
 
     /// Verify if the provided assets follows the required standards.
     #[structopt(name = "verify")]
@@ -43,4 +46,21 @@ pub enum Command {
     Rarity {},
 }
 
+#[derive(Debug, StructOpt)]
+pub enum InitSubcommands {
+    /// Initialize working folder with name *<name>* for Solana Blockchain  
+    #[structopt(name = "solana")]
+    Solana {
+        /// Name of the working folder
+        #[structopt(short, long)]
+        name: String,
+    },
+    /// Initialize working folder with name *<name>* for Ethereum Blockchain  
+    #[structopt(name = "ethereum")]
+    Ethereum {
+        /// Name of the working folder
+        #[structopt(short, long)]
+        name: String,
+    },
+}
 

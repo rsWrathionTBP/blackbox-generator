@@ -1,16 +1,17 @@
 [package]
 name = "blackbox-generator"
-version = "0.0.5"
+version = "0.0.6"
 edition = "2021"
 description="In develop"
 repository="https://github.com/rsWrathionTBP/blackbox-generator"
 license = "Apache-2.0"
 
 [[bin]]
-name = "blackbox"
+name = "bbox"
 path = "src/main.rs"
 
 [dependencies]
 structopt = "0.3.25"
 rayon = "1.5.1"
 anyhow = "1.0.52"
+fs_extra = "1.2.0"
