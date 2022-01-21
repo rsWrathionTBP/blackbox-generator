@@ -22,7 +22,7 @@ pub fn initialize_solana_working_folder(actual_path: PathBuf, name: String) -> R
     
     println!("\tCreating {}-solana-workspace folder at: {}", name, actual_path.display());
     if working_path.exists(){
-        println!("\tERROR! {}-solana-workspace already exists in this path! Try using a another name!", name);
+        println!("\tERROR! {}-solana-workspace already exists in this path, try using a another name!", name);
         process::exit(1);
     }
     match fs::create_dir(&working_path){

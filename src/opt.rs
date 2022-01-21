@@ -27,7 +27,10 @@ pub enum Command {
 
     /// Verify if the provided assets follows the required standards.
     #[structopt(name = "verify")]
-    Verify {},
+    Verify {
+        #[structopt(short, long, default_value = "assets")]
+        assets_name: String,
+    },
 
     /// Starts the UI configuration process.
     #[structopt(name = "config")]
@@ -63,4 +66,5 @@ pub enum InitSubcommands {
         name: String,
     },
 }
+
 

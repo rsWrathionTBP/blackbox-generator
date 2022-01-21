@@ -1,9 +1,10 @@
 {
+    "blockchain": "solana",
     "name": "",
     "description": "",
     "symbol": "",
     "external_url": "",
-    "seller_fee_basis_point": 0,
+    "seller_fee_basis_points": 0,
     "creators": [
 
     ],

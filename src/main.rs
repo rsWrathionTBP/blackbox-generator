@@ -18,7 +18,7 @@ fn main() -> Result<()> {
 
     match option.command {
         Command::Init {init_subcommands} => command_init(actual_path, init_subcommands)?,
-        Command::Verify {} => command_verify()?,
+        Command::Verify {assets_name} => command_verify(actual_path, assets_name)?,
         Command::Config {} => command_config()?,
         Command::Edit {} => command_edit()?,
         Command::Generate {} => command_generate()?,

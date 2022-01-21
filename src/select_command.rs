@@ -6,6 +6,9 @@ use crate::init::{
     initialize_solana_working_folder,
     initialize_ethereum_working_folder,
 };
+use crate::verify::{
+    verify_assets,
+};
 use crate::opt::{
     InitSubcommands,
 };
@@ -17,8 +20,9 @@ pub fn command_init(actual_path: PathBuf, subcommands: InitSubcommands ) -> Resu
     }
 }
 
-pub fn command_verify() -> Result<()>{
-    todo!();
+pub fn command_verify(actual_path: PathBuf, assets_name: String) -> Result<()>{
+    verify_assets(actual_path, assets_name)?;
+    Ok(())
 }
 
 pub fn command_config() -> Result<()>{

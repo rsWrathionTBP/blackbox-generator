@@ -1,9 +1,10 @@
 {
+    "blockchain": "solana",
     "name": "Blackbox Logos",
     "description": "Blackbox-Generator Logos as NFTs!",
     "symbol": "BBOX",
     "external_url": "https://github.com/rsWrathionTBP/",
-    "seller_fee_basis_point": 500,
+    "seller_fee_basis_points": 500,
     "creators": [
         {
             "address": "DufyoaF6sC5jtq2NjUE7CnNhoMqZQM6bMaMJjacNsD1g",
@@ -28,7 +29,7 @@
             "separateFolder": false,
             "name": "The Original Logo",
             "description": "The Original blackbox-generator Logo!",
-            "seller_fee_basis_point": 700,
+            "seller_fee_basis_points": 700,
             "extension": ".png",
             "replaceAttributes": true,
             "items": [
@@ -45,7 +46,7 @@
             "separateFolder": false,
             "name": "",
             "description": "",
-            "seller_fee_basis_point": 1000,
+            "seller_fee_basis_points": 1000,
             "extension": ".png",
             "replaceAttributes": false,
             "items": [
