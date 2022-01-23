@@ -1,0 +1,28 @@
+{
+    "blockchain": "solana",
+    "name": "",
+    "description": "",
+    "symbol": "",
+    "external_url": "",
+    "seller_fee_basis_points": 0,
+    "creators": [
+
+    ],
+    "width": 2048,
+    "height": 2048,
+    "ignoreBackground": false,
+    "rarity": [
+        {"value": "Legendary", "belowToPercentage": 3.5, "color": "#D16532"},
+        {"value": "Rare", "belowToPercentage": 8.0, "color": "#6E3480"},
+        {"value": "Common", "belowToPercentage": 100.0, "color": "#2800FA"}
+    ],
+    "customNFTs": [
+
+    ],
+    "noCombineTraits": [
+
+    ],
+    "layerConfigs": [
+            
+    ]
+}

@@ -9,8 +9,14 @@ use crate::init::{
 use crate::verify::{
     verify_assets,
 };
+use crate::generate::{
+    generate_sample,
+    generate_nfts,
+    generate_all,
+};
 use crate::opt::{
     InitSubcommands,
+    GenerateSubcommands,
 };
 
 pub fn command_init(actual_path: PathBuf, subcommands: InitSubcommands ) -> Result<()> {
@@ -20,8 +26,8 @@ pub fn command_init(actual_path: PathBuf, subcommands: InitSubcommands ) -> Resu
     }
 }
 
-pub fn command_verify(actual_path: PathBuf, assets_name: String) -> Result<()>{
-    verify_assets(actual_path, assets_name)?;
+pub fn command_verify(actual_path: PathBuf, assets_path: String) -> Result<()>{
+    verify_assets(actual_path, assets_path)?;
     Ok(())
 }
 
@@ -33,8 +39,12 @@ pub fn command_edit() -> Result<()>{
     todo!();
 }
 
-pub fn command_generate() -> Result<()>{
-    todo!();
+pub fn command_generate(actual_path: PathBuf, subcommands: GenerateSubcommands) -> Result<()>{
+    match subcommands{
+        GenerateSubcommands::Sample {assets_path, config_path} => generate_sample(actual_path, assets_path, config_path),
+        GenerateSubcommands::NFTs {sample_path} => generate_nfts(actual_path, sample_path),
+        GenerateSubcommands::All {assets_path, config_path} => generate_all(actual_path, assets_path, config_path),
+    }
 }
 
 pub fn command_rarity() -> Result<()>{

@@ -45,11 +45,11 @@ pub fn initialize_solana_working_folder(actual_path: PathBuf, name: String) -> R
     let mut config_path = template_path.clone();
     config_path.push("config-solana.json");
 
-    println!("\tCreating config-solana.json file at: {}", working_path.display());
-    match fs::copy(config_path, "config-solana.json"){
-        Ok(_) => {println!("\tSUCCESS! config-solana.json file created")},
+    println!("\tCreating config.json file at: {}", working_path.display());
+    match fs::copy(config_path, "config.json"){
+        Ok(_) => {println!("\tSUCCESS! config.json file created")},
         Err(e) => {
-            println!("\tERROR! Unable to create config-solana.json file, with error {}", e);
+            println!("\tERROR! Unable to create config.json file, with error {}", e);
             process::exit(1);
         }
     }
@@ -66,11 +66,11 @@ pub fn initialize_solana_working_folder(actual_path: PathBuf, name: String) -> R
     let mut example_config_path = template_path.clone();
     example_config_path.push("example-config-solana.json");
 
-    println!("\tCreating example-config-solana.json file at: {}", working_path.display());
-    match fs::copy(example_config_path, "example-config-solana.json"){
-        Ok(_) => {println!("\tSUCCESS! example-config-solana.json file created")},
+    println!("\tCreating example-config.json file at: {}", working_path.display());
+    match fs::copy(example_config_path, "example-config.json"){
+        Ok(_) => {println!("\tSUCCESS! example-config.json file created")},
         Err(e) => {
-            println!("\tERROR! Unable to create example-config-solana.json file, with error {}", e);
+            println!("\tERROR! Unable to create example-config.json file, with error {}", e);
             process::exit(1);
         }
     }

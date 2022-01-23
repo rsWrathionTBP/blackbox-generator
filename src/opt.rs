@@ -25,11 +25,11 @@ pub enum Command {
         init_subcommands: InitSubcommands,
     },
 
-    /// Verify if the provided assets follows the required standards.
+    /// Verify if the provided assets folder follows the required standards.
     #[structopt(name = "verify")]
     Verify {
         #[structopt(short, long, default_value = "assets")]
-        assets_name: String,
+        assets_path: String,
     },
 
     /// Starts the UI configuration process.
@@ -42,7 +42,10 @@ pub enum Command {
 
     /// Generate a collection following the configuration.
     #[structopt(name = "generate")]
-    Generate {},
+    Generate {
+        #[structopt(subcommand)]
+        generate_subcommands: GenerateSubcommands,
+    },
 
     /// Calculates the Rarity ranking of an already created NFT Colelction
     #[structopt(name = "rarity")]
@@ -64,6 +67,34 @@ pub enum InitSubcommands {
         /// Name of the working folder
         #[structopt(short, long)]
         name: String,
+    },
+}
+
+#[derive(Debug, StructOpt)]
+pub enum GenerateSubcommands {
+    /// Uses the assets folder and the configuration file to generates a json with the layers of each NFT
+    #[structopt(name = "sample")]
+    Sample {
+        #[structopt(short, long, default_value = "assets")]
+        assets_path: String,
+
+        #[structopt(short, long, default_value = "config.json")]
+        config_path: String,
+    },
+    // Uses the json file generated in *generate sample* command folder to create all the the pairs (image, json) that represent an NFT collection
+    #[structopt(name = "nfts")]
+    NFTs {
+        #[structopt(short, long, default_value = "samples.json")]
+        sample_path: String,
+    },
+    /// Generates the samples and the nfts in one go
+    #[structopt(name = "all")]
+    All {
+        #[structopt(short, long, default_value = "assets")]
+        assets_path: String,
+
+        #[structopt(short, long, default_value = "config.json")]
+        config_path: String,
     },
 }
 

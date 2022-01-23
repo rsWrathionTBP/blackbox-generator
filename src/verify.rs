@@ -4,30 +4,30 @@ use crate::utils;
 use std::{path::PathBuf, fs, process};
 
 
-pub fn verify_assets(actual_path: PathBuf, assets_name: String) -> Result<()>{
+pub fn verify_assets(actual_path: PathBuf, assets_folder: String) -> Result<()>{
     let mut assets_path = actual_path.clone();
-    assets_path.push(&assets_name);
+    assets_path.push(&assets_folder);
 
     let mut possible_error = false;
     let mut errors_array: Vec<String> = Vec::new();
 
     if !assets_path.exists() {
-        println!("ERROR! {} folder does not exists in {}!", assets_name, actual_path.display());
+        println!("ERROR! {} folder does not exists in {}!", assets_folder, actual_path.display());
         process::exit(1);
     }
     if !assets_path.is_dir() {
-        println!("ERROR! {} is not a folder!", assets_name);
+        println!("ERROR! {} is not a folder!", assets_folder);
         process::exit(1);
     }
 
-    println!("Verifying {} folder, all the possibles errors will be notified!", assets_name);
+    println!("Verifying {} folder, all the possibles errors will be notified!", assets_folder);
 
     let folders = fs::read_dir(&assets_path)?;
 
     let (images_shapes, images_with_shape) = utils::get_assets_files(folders)?;
 
     if images_shapes.len() <= 0 {
-        println!("No files founded at {} folder, try using a non-empty assets folder", assets_name);
+        println!("No files founded at {} folder, try using a non-empty assets folder", assets_folder);
         return Ok(())
     }
     let (correct_size, _) = images_shapes.first().unwrap();

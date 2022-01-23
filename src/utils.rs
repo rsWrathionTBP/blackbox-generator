@@ -59,5 +59,4 @@ pub fn get_assets_files(folders: ReadDir) -> Result<(IndexMap<ImageSize, usize>,
     }
     images_shapes.sort_keys();
     return Ok((images_shapes, images_with_shape))
-
 }

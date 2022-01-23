@@ -1,0 +1,105 @@
+{
+    "blockchain": "solana",
+    "name": "Blackbox Logos",
+    "description": "Blackbox-Generator Logos as NFTs!",
+    "symbol": "BBOX",
+    "external_url": "https://github.com/rsWrathionTBP/",
+    "seller_fee_basis_points": 500,
+    "creators": [
+        {
+            "address": "DufyoaF6sC5jtq2NjUE7CnNhoMqZQM6bMaMJjacNsD1g",
+            "share": 50
+        },
+        {
+            "address": "5CbWWXYZS3YBB6YNwzPjQ2ejV8g1v4n6htS1pTwT5Uj9",
+            "share": 50
+        }
+    ],
+    "width": 2048,
+    "height": 2048,
+    "ignoreBackground": false,
+    "rarity": [
+        {"value": "Legendary", "belowToPercentage": 3.5, "color": "#D16532"},
+        {"value": "Rare", "belowToPercentage": 8.0, "color": "#6E3480"},
+        {"value": "Common", "belowToPercentage": 100.0, "color": "#2800FA"}
+    ],
+    "customNFTs": [
+        {
+            "quantity": 1,
+            "separateFolder": false,
+            "name": "The Original Logo",
+            "description": "The Original blackbox-generator Logo!",
+            "seller_fee_basis_points": 700,
+            "extension": ".png",
+            "replaceAttributes": true,
+            "items": [
+                {"background": "27-black.png"},
+                {"lines": "2-white.png"},
+                {"letter": "13-white.png"}
+            ],
+            "extraAttributes": [
+                {"trait_type": "Logo", "value": "Orignal Version"}
+            ]
+        },
+        {
+            "quantity": 2,
+            "separateFolder": false,
+            "name": "",
+            "description": "",
+            "seller_fee_basis_points": 1000,
+            "extension": ".png",
+            "replaceAttributes": false,
+            "items": [
+                {"background": "5-beige.png"},
+                {"lines": "23-purple.png"},
+                {"letter":  "25-granate.png"}
+            ],
+            "extraAttributes": [
+
+            ]
+        }
+    ],
+    "noCombineTraits": [
+        {
+            "background": "14-pink.png",
+            "banned": [
+                {"lines": "20-granate.png"},
+                {"letter": "25-granate.png"},
+                {"letter": "5-purple.png"}
+            ]
+        },
+        {
+            "lines": "20-granate.png",
+            "banned": [
+                {"letter": "7-yellow.png"}
+            ]
+        }
+    ],
+    "layerConfigs": [
+        {
+            "quantity": 30,
+            "extension": ".png",
+            "layersOrder": [
+                "background",
+                "lines",
+                "letter"
+            ]
+        },
+        {
+            "quantity": 10,
+            "extension": ".png",
+            "layersOrder": [
+                "background",
+                "letter"
+            ]
+        },
+        {
+            "quantity": 10,
+            "extension": ".png",
+            "layersOrder": [
+                "background",
+                "lines"
+            ]
+        }
+    ]
+}
